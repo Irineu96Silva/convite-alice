@@ -5,7 +5,33 @@ const Index = () => {
       {/* Container Principal */}
       <div className="max-w-md mx-auto bg-white shadow-2xl rounded-3xl overflow-hidden relative">
         
-        {/* Seção do Vídeo - Topo */}
+        {/* Borda Floral Superior */}
+        <div className="relative h-16 bg-gradient-to-r from-pink-100 via-blue-50 to-pink-100 overflow-hidden">
+          <div className="absolute inset-0 flex justify-center items-center space-x-6">
+            <img 
+              src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=60&h=60&fit=crop" 
+              alt="Flor decorativa"
+              className="w-8 h-8 rounded-full opacity-60"
+            />
+            <img 
+              src="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=60&h=60&fit=crop" 
+              alt="Flor decorativa"
+              className="w-6 h-6 rounded-full opacity-50"
+            />
+            <img 
+              src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=60&h=60&fit=crop" 
+              alt="Flor decorativa"
+              className="w-8 h-8 rounded-full opacity-60"
+            />
+            <img 
+              src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=60&h=60&fit=crop" 
+              alt="Flor decorativa"
+              className="w-6 h-6 rounded-full opacity-50"
+            />
+          </div>
+        </div>
+
+        {/* Seção do Vídeo */}
         <div className="relative h-64 overflow-hidden">
           <video 
             className="w-full h-full object-cover"
@@ -24,10 +50,10 @@ const Index = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
         </div>
 
-        {/* Seção da Imagem Principal - Alice */}
-        <div className="relative h-80 bg-gradient-to-b from-blue-200 via-pink-100 to-white overflow-hidden">
+        {/* Seção Unificada - Alice + Convite */}
+        <div className="relative bg-gradient-to-b from-blue-200 via-pink-100 to-white px-8 py-12">
           {/* Imagem de fundo profissional */}
-          <div className="absolute inset-0 opacity-20">
+          <div className="absolute inset-0 opacity-15">
             <img 
               src="https://images.unsplash.com/photo-1500673922987-e212871fec22?w=800&h=600&fit=crop" 
               alt="Background"
@@ -38,14 +64,14 @@ const Index = () => {
           {/* Decorações de fundo */}
           <div className="absolute inset-0">
             {/* Flores decorativas com imagens profissionais */}
-            <div className="absolute top-8 left-4 w-16 h-16 rounded-full overflow-hidden opacity-40">
+            <div className="absolute top-8 left-4 w-12 h-12 rounded-full overflow-hidden opacity-30">
               <img 
                 src="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=100&h=100&fit=crop" 
                 alt="Decoração"
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="absolute top-16 right-8 w-12 h-12 rounded-full overflow-hidden opacity-50">
+            <div className="absolute top-16 right-8 w-10 h-10 rounded-full overflow-hidden opacity-40">
               <img 
                 src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=100&h=100&fit=crop" 
                 alt="Decoração"
@@ -60,18 +86,45 @@ const Index = () => {
             <div className="absolute bottom-28 right-6 text-xl opacity-35">⏰</div>
           </div>
           
-          {/* Imagem Principal da Alice com foto profissional */}
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-48 h-48 bg-gradient-to-br from-blue-300 to-pink-200 rounded-full flex items-center justify-center shadow-xl relative overflow-hidden">
-              {/* Imagem de fundo dentro do círculo */}
-              <div className="absolute inset-0 opacity-30">
-                <img 
-                  src="https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=400&h=400&fit=crop" 
-                  alt="Alice Background"
-                  className="w-full h-full object-cover rounded-full"
-                />
+          {/* Conteúdo Principal Unificado */}
+          <div className="relative z-10 text-center">
+            {/* Imagem Principal da Alice */}
+            <div className="flex justify-center mb-8">
+              <div className="w-40 h-40 bg-gradient-to-br from-blue-300 to-pink-200 rounded-full flex items-center justify-center shadow-xl relative overflow-hidden">
+                {/* Imagem de fundo dentro do círculo */}
+                <div className="absolute inset-0 opacity-30">
+                  <img 
+                    src="https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=400&h=400&fit=crop" 
+                    alt="Alice Background"
+                    className="w-full h-full object-cover rounded-full"
+                  />
+                </div>
+                <div className="text-5xl relative z-10">👧🏼</div>
               </div>
-              <div className="text-6xl relative z-10">👧🏼</div>
+            </div>
+            
+            {/* Nome Alice */}
+            <h1 className="text-6xl font-bold text-blue-500 mb-2 alice-font tracking-wide">
+              Alice
+            </h1>
+            
+            {/* Idade */}
+            <div className="text-2xl text-blue-400 font-medium mb-8 alice-font">
+              1 ano
+            </div>
+            
+            {/* Linha decorativa */}
+            <div className="w-24 h-0.5 bg-gradient-to-r from-transparent via-blue-300 to-transparent mx-auto mb-8"></div>
+            
+            {/* Mensagem Principal */}
+            <div className="mb-8 space-y-4">
+              <p className="text-blue-600 leading-relaxed text-base wonderland-font font-medium px-2">
+                O País das Maravilhas abrirá suas portas para receber você, como convidado de honra, na comemoração do meu
+              </p>
+              
+              <div className="text-4xl font-bold text-blue-600 alice-font">
+                1º aninho
+              </div>
             </div>
           </div>
           
@@ -85,33 +138,8 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Conteúdo Principal */}
-        <div className="px-8 py-6 text-center relative bg-white">
-          
-          {/* Nome Alice */}
-          <h1 className="text-6xl font-bold text-blue-500 mb-2 alice-font tracking-wide">
-            Alice
-          </h1>
-          
-          {/* Idade */}
-          <div className="text-2xl text-blue-400 font-medium mb-8 alice-font">
-            1 ano
-          </div>
-          
-          {/* Linha decorativa */}
-          <div className="w-24 h-0.5 bg-gradient-to-r from-transparent via-blue-300 to-transparent mx-auto mb-8"></div>
-          
-          {/* Mensagem Principal */}
-          <div className="mb-8 space-y-4">
-            <p className="text-blue-600 leading-relaxed text-base wonderland-font font-medium px-2">
-              O País das Maravilhas abrirá suas portas para receber você, como convidado de honra, na comemoração do meu
-            </p>
-            
-            <div className="text-4xl font-bold text-blue-600 alice-font">
-              1º aninho
-            </div>
-          </div>
-          
+        {/* Seção de Data e Botões */}
+        <div className="px-8 py-6 bg-white relative">
           {/* Data e Hora */}
           <div className="bg-gradient-to-r from-pink-100 via-blue-50 to-pink-100 rounded-2xl p-6 mb-8 border border-pink-200 relative overflow-hidden">
             <div className="absolute inset-0 bg-white/30"></div>
@@ -192,6 +220,32 @@ const Index = () => {
             <span>🎂</span>
             <span>🎈</span>
             <span>🎉</span>
+          </div>
+        </div>
+
+        {/* Borda Floral Inferior */}
+        <div className="relative h-16 bg-gradient-to-r from-pink-100 via-blue-50 to-pink-100 overflow-hidden">
+          <div className="absolute inset-0 flex justify-center items-center space-x-6">
+            <img 
+              src="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=60&h=60&fit=crop" 
+              alt="Flor decorativa"
+              className="w-6 h-6 rounded-full opacity-50"
+            />
+            <img 
+              src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=60&h=60&fit=crop" 
+              alt="Flor decorativa"
+              className="w-8 h-8 rounded-full opacity-60"
+            />
+            <img 
+              src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=60&h=60&fit=crop" 
+              alt="Flor decorativa"
+              className="w-6 h-6 rounded-full opacity-50"
+            />
+            <img 
+              src="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=60&h=60&fit=crop" 
+              alt="Flor decorativa"
+              className="w-8 h-8 rounded-full opacity-60"
+            />
           </div>
         </div>
         
