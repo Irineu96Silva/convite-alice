@@ -5,15 +5,53 @@ const Index = () => {
       {/* Container Principal */}
       <div className="max-w-md mx-auto bg-white shadow-2xl rounded-3xl overflow-hidden relative">
         
+        {/* Seção do Vídeo - Topo */}
+        <div className="relative h-64 overflow-hidden">
+          <video 
+            className="w-full h-full object-cover"
+            controls
+            autoPlay
+            muted
+            loop
+            poster="https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?w=800&h=600&fit=crop"
+          >
+            {/* SUBSTITUIR pela URL do seu vídeo */}
+            <source src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4" type="video/mp4" />
+            Seu navegador não suporta vídeos HTML5.
+          </video>
+          
+          {/* Overlay decorativo */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
+        </div>
+
         {/* Seção da Imagem Principal - Alice */}
         <div className="relative h-80 bg-gradient-to-b from-blue-200 via-pink-100 to-white overflow-hidden">
+          {/* Imagem de fundo profissional */}
+          <div className="absolute inset-0 opacity-20">
+            <img 
+              src="https://images.unsplash.com/photo-1500673922987-e212871fec22?w=800&h=600&fit=crop" 
+              alt="Background"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          
           {/* Decorações de fundo */}
           <div className="absolute inset-0">
-            {/* Flores decorativas */}
-            <div className="absolute top-8 left-4 w-12 h-12 bg-pink-200 rounded-full opacity-60 blur-sm"></div>
-            <div className="absolute top-16 right-8 w-8 h-8 bg-blue-200 rounded-full opacity-50 blur-sm"></div>
-            <div className="absolute bottom-20 left-8 w-10 h-10 bg-purple-200 rounded-full opacity-40 blur-sm"></div>
-            <div className="absolute bottom-32 right-12 w-6 h-6 bg-pink-300 rounded-full opacity-60 blur-sm"></div>
+            {/* Flores decorativas com imagens profissionais */}
+            <div className="absolute top-8 left-4 w-16 h-16 rounded-full overflow-hidden opacity-40">
+              <img 
+                src="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=100&h=100&fit=crop" 
+                alt="Decoração"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="absolute top-16 right-8 w-12 h-12 rounded-full overflow-hidden opacity-50">
+              <img 
+                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=100&h=100&fit=crop" 
+                alt="Decoração"
+                className="w-full h-full object-cover"
+              />
+            </div>
             
             {/* Elementos Alice no País das Maravilhas */}
             <div className="absolute top-12 right-4 text-2xl opacity-30">🌹</div>
@@ -22,10 +60,18 @@ const Index = () => {
             <div className="absolute bottom-28 right-6 text-xl opacity-35">⏰</div>
           </div>
           
-          {/* Imagem Principal da Alice */}
+          {/* Imagem Principal da Alice com foto profissional */}
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-48 h-48 bg-gradient-to-br from-blue-300 to-pink-200 rounded-full flex items-center justify-center shadow-xl">
-              <div className="text-6xl">👧🏼</div>
+            <div className="w-48 h-48 bg-gradient-to-br from-blue-300 to-pink-200 rounded-full flex items-center justify-center shadow-xl relative overflow-hidden">
+              {/* Imagem de fundo dentro do círculo */}
+              <div className="absolute inset-0 opacity-30">
+                <img 
+                  src="https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=400&h=400&fit=crop" 
+                  alt="Alice Background"
+                  className="w-full h-full object-cover rounded-full"
+                />
+              </div>
+              <div className="text-6xl relative z-10">👧🏼</div>
             </div>
           </div>
           
