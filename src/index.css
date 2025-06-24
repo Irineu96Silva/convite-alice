@@ -38,19 +38,12 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -107,10 +100,12 @@
 @layer components {
   .alice-font {
     font-family: 'Dancing Script', cursive;
+    font-weight: 700;
   }
   
   .wonderland-font {
     font-family: 'Playfair Display', serif;
+    font-weight: 500;
   }
   
   /* Efeito de cartão flutuante */
@@ -123,16 +118,16 @@
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   }
   
-  /* Animação dos naipes */
-  .suit-animation {
-    animation: float 4s ease-in-out infinite;
+  /* Animação suave para elementos */
+  .gentle-float {
+    animation: gentle-float 6s ease-in-out infinite;
   }
   
-  /* Efeito shimmer para o texto gradiente */
+  /* Efeito shimmer sutil */
   .text-shimmer {
-    background: linear-gradient(45deg, #ec4899, #8b5cf6, #3b82f6, #ec4899);
+    background: linear-gradient(45deg, #3b82f6, #8b5cf6, #ec4899, #3b82f6);
     background-size: 200% 200%;
-    animation: shimmer 3s ease-in-out infinite;
+    animation: shimmer 4s ease-in-out infinite;
   }
   
   @keyframes shimmer {
@@ -142,5 +137,21 @@
     50% {
       background-position: 100% 50%;
     }
+  }
+  
+  @keyframes gentle-float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-3px);
+    }
+  }
+  
+  /* Estilo para os botões curvos */
+  .curved-text {
+    font-size: 10px;
+    letter-spacing: 1px;
+    transform: rotate(-15deg);
   }
 }
