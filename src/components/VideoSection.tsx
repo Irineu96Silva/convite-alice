@@ -8,7 +8,7 @@ const VideoSection = () => {
         loop
         poster='https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?w=800&h=600&fit=crop'
       >
-        <source src='./src/assets/video_certo.mp4' type='video/mp4' />
+        <source src='./video_certo.mp4' type='video/mp4' />
         Seu navegador não suporta vídeos HTML5.
       </video>
 
